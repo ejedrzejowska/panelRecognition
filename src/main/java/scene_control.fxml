@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<GridPane fx:controller="pl.bsh.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="top_left" hgap="10" vgap="10">
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+    <!--<VBox spacing="10" alignment="bottom_left">-->
+        <Button text="captureImage()"
+                GridPane.columnIndex="0" GridPane.rowIndex="0"
+                onAction="#handleSubmitButtonAction"/>
+        <Button text="verifyPlatform()"
+                GridPane.columnIndex="0" GridPane.rowIndex="1"
+                onAction="#verifyButtonAction"/>
+        <Button text="getTests()"
+                GridPane.columnIndex="0" GridPane.rowIndex="2"
+                onAction="#getTestButtonAction"/>
+    <!--</VBox>-->
+
+    <Text fx:id="actiontarget"
+          GridPane.columnIndex="0" GridPane.columnSpan="2"
+          GridPane.halignment="LEFT" GridPane.rowIndex="3"/>
+    <ImageView fx:id="imageView" GridPane.columnIndex="0" GridPane.rowIndex="4"
+               fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+</GridPane>
